@@ -73,13 +73,12 @@
 			<!-- Multiple Radios (inline) -->
 			<div class="form-group">
 			  <label class="col-md-4 control-label" for="radios">{{movie[0]}}</label>
-			  <div class="col-md-8"> 
-			  	{% for j in range(1,11) %}
-			    <label class="radio-inline" for="radios-0">
-			      <input type="radio" name="{{movie[0]}}" id="radios-{% print j/2 %}" value="{% print j/2 %}" {% if movie[1] == "0.5" %} checked {% endif %}>
-			      {% print j/2  %}
+			  <div class="col-md-8">			  	
+		    	<label class="radio-inline" for="radios-0">
+			      <input type="text" name="{{movie}}-tags" id="text-{{movie}}" value="" placeholder="">
+            Comma(,) Separted
 			    </label> 
-			    {% endfor %}
+			    
 			  </div>
 			</div>
 			{% endfor %}
